@@ -11,7 +11,7 @@ size = size.upper()
 add_pepperoni = add_pepperoni.upper() 
 extra_cheese = extra_cheese.upper()
 
-print(f"size = {size}\nadd_pepperoni = \"{add_pepperoni}\"\nextra_cheese = \"{extra_cheese}\"")
+#print(f"size = {size}\nadd_pepperoni = \"{add_pepperoni}\"\nextra_cheese = \"{extra_cheese}\"")
 
 if (size == "S"):
    price = 15
@@ -21,7 +21,10 @@ elif (size == "L"):
     price = 25
 
 if (add_pepperoni == "Y"):
-   price += 3
+    if (size == "S"):
+        price += 2
+    else:
+        price += 3
 
 if (extra_cheese == "Y"):
    price += 1
