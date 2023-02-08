@@ -13,12 +13,16 @@ r = combined_string.count('r')
 u = combined_string.count('u')
 e = combined_string.count('e')
 
+true = t + r + u + e
+
 l = combined_string.count('l')
 o = combined_string.count('o')
 v = combined_string.count('v')
 e = combined_string.count('e')
 
+love = l + o + v + e
 
+love_score = str(true) + str(love)
 
-print(f"The letter e occurs {e} times")
+print(f"Your total love score is {love_score}")
 
