@@ -17,17 +17,25 @@ import pandas
 
 # Load the file contents into a Panda's dataframe 
 data = pandas.read_csv("data/weather_data.csv")
+print(data)
+print(type(data))
 
-# <class 'pandas.core.frame.DataFrame'>
-# print(type(data))
+# Print a Panda's series
+print(data["temp"])
+print(type(data["temp"]))
 
-# <class 'pandas.core.series.Series'>
+# Coonvert a Panda's series to a list
 data_list = data["temp"].to_list()
-print(sum(data_list)/len(data_list))
+print(data_list)
+print(type(data_list))
 
-print(data["temp"].mean())
+# Covert Panda's data dataframe to a dictionary
+data_dict = data.to_dict()
+print(data_dict)
+print(type(data_dict))
+
+print(data["temp"].min())
 print(data["temp"].max())
-
-# Covert data dataframe to a dictionary
-# data_dict = data.to_dict()
-# print(data_dict)
+print(data["temp"].mean())
+print("Hello"[0:3])
+print("Hello"[0:2])
